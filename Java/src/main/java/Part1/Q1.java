@@ -35,6 +35,7 @@ public class Q1 {
     }
 
     /**
+     * 若字符串中仅包含小写字母a - z
      * 使用bit vector，减少空间。
      */
     public boolean isUniqueChars2(String str) {
@@ -44,13 +45,12 @@ public class Q1 {
         int checker = 0;
         for (int i = 0; i < str.length(); i++) {
             int val = str.charAt(i) - 'a';
-            if ((checker & (1 << val)) > 0) {
+            if ((checker & (1 << val)) > 0) {   // 取对应位是否为1，是1则该位之前已经被置过1，故重复
                 return false;
             }
-            checker |= (1 << val);
+            checker |= (1 << val);  // 将对应位置1
         }
         return true;
-
     }
 
     @Test
@@ -58,13 +58,14 @@ public class Q1 {
         Assert.assertEquals(true, isUniqueChars("abcdef"));
         Assert.assertEquals(false, isUniqueChars("matao"));
         Assert.assertEquals(false, isUniqueChars("abcdef*))%$%^&*("));
+        Assert.assertEquals(true, isUniqueChars("<>ABC~"));
     }
 
     @Test
     public void testIsUniqueChars2() {
         Assert.assertEquals(true, isUniqueChars2("abcdef"));
         Assert.assertEquals(false, isUniqueChars2("matao"));
-        Assert.assertEquals(false, isUniqueChars2("abcdef*))%$%^&*("));
     }
+
 
 }
