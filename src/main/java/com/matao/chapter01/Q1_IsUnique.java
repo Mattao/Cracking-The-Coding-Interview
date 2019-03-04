@@ -4,7 +4,7 @@ package com.matao.chapter01;
  * Implement an algorithm to determine if a string has all unique characters.
  * What if you cannot use additional data structures?
  */
-public class Q1_UniqueCharacter {
+public class Q1IsUnique {
 
     public static boolean isUniqueChars(String str) {
         if (str.length() > 128) {

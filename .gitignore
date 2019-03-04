@@ -27,3 +27,5 @@ buildCache
 .settings/
 
 .DS_Store
+
+out/
