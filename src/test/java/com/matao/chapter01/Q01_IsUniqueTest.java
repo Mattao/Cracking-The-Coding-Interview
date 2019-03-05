@@ -4,30 +4,30 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class Q1_IsUniqueTest {
+public class Q01_IsUniqueTest {
 
     @Test
     @DisplayName("test isUniqueChars with null")
     void testNull() {
-        Assertions.assertFalse(Q1_IsUnique.isUniqueChars(null));
+        Assertions.assertFalse(Q01_IsUnique.isUniqueChars(null));
     }
 
     @Test
     @DisplayName("test isUniqueChars with empty string")
     void testEmptyString() {
-        Assertions.assertTrue(Q1_IsUnique.isUniqueChars(""));
+        Assertions.assertTrue(Q01_IsUnique.isUniqueChars(""));
     }
 
     @Test
     @DisplayName("test isUniqueChars with single char")
     void testSingleChar() {
-        Assertions.assertTrue(Q1_IsUnique.isUniqueChars("x"));
+        Assertions.assertTrue(Q01_IsUnique.isUniqueChars("x"));
     }
 
     @Test
     @DisplayName("test isUniqueChars with multi-chars")
     void testMultiChars() {
-        Assertions.assertFalse(Q1_IsUnique.isUniqueChars("fghjhjsfasd"));
+        Assertions.assertFalse(Q01_IsUnique.isUniqueChars("fghjhjsfasd"));
     }
 
     /**
@@ -37,24 +37,24 @@ public class Q1_IsUniqueTest {
     @Test
     @DisplayName("test isUniqueCharsByBitSet with null")
     void testBitSetNull() {
-        Assertions.assertFalse(Q1_IsUnique.isUniqueCharsByBitSet(null));
+        Assertions.assertFalse(Q01_IsUnique.isUniqueCharsByBitSet(null));
     }
 
     @Test
     @DisplayName("test isUniqueCharsByBitSet with empty string")
     void testBitSetEmptyString() {
-        Assertions.assertTrue(Q1_IsUnique.isUniqueCharsByBitSet(""));
+        Assertions.assertTrue(Q01_IsUnique.isUniqueCharsByBitSet(""));
     }
 
     @Test
     @DisplayName("test isUniqueCharsByBitSet with single char")
     void testBitSetSingleChar() {
-        Assertions.assertTrue(Q1_IsUnique.isUniqueChars("x"));
+        Assertions.assertTrue(Q01_IsUnique.isUniqueChars("x"));
     }
 
     @Test
     @DisplayName("test isUniqueCharsByBitSet with multi-chars")
     void testBitSetMultiChars() {
-        Assertions.assertFalse(Q1_IsUnique.isUniqueChars("fghjhjsfasd"));
+        Assertions.assertFalse(Q01_IsUnique.isUniqueChars("fghjhjsfasd"));
     }
 }
