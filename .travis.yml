@@ -8,4 +8,4 @@ notifications:
   email:
     recipients: muxter.matao@gmail.com
     on_success: never
-    on_failure: always
+    on_failure: never
